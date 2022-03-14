@@ -3,7 +3,7 @@
   "description": "Java Script Init for all Plain Java Script projects",
   "name": "react-init",
   "scripts": {
-    "start:dev": "NODE_ENV=development node server/index.js",
+    "start:dev": "NODE_ENV=development npm run build:prod && NODE_ENV=development node server/index.js",
     "build:prod": "webpack --mode=production --node-env=production",
     "build:prod:server": "rm -rf server-dist/server.js && webpack --config webpack.server.config.js --mode=production",
     "start": "NODE_ENV=production node server-dist/server.js"
